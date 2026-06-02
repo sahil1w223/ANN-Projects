@@ -1,13 +1,15 @@
 from tensorflow.keras.datasets import imdb
 from tensorflow.keras.preprocessing import sequence
 from tensorflow.keras.models import load_model
+import os
 
 import warnings
 warnings.filterwarnings('ignore')
 
 word_index = imdb.get_word_index()
 
-model = load_model('simple_rnn_imdb.h5')
+model_path = os.path.join(os.path.dirname(__file__), "simple_rnn_imdb.h5")
+model = load_model(model_path)
 
 def preprocessing(text):
     text = text.lower().split()
