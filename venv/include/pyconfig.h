@@ -199,8 +199,6 @@ typedef _W64 int Py_ssize_t;
 #endif
 #endif /* MS_WIN32 && !MS_WIN64 */
 
-typedef int pid_t;
-
 /* define some ANSI types that are not defined in earlier Win headers */
 #if _MSC_VER >= 1200
 /* This file only exists in VC 6.0 or higher */
